@@ -48,10 +48,19 @@ public class NematodeVisualiser extends PApplet
 		loadNematodes();
 		printNematodes();			
 	}
-
+	
+	public void drawNematodes()
+	{
+		for(Nematode a:nematodes)
+		{
+			a.render(this);
+		}
+	}
 
 	public void draw()
 	{	
 		background(0);
+		fill(150);
+		drawNematodes();
 	}
 }

@@ -9,6 +9,14 @@ public class Nematode {
     private String gender;
     private boolean eyes;
 
+    
+
+    @Override
+    public String toString() {
+        return "Nematode [eyes=" + eyes + ", gender=" + gender + ", limbs=" + limbs + ", name=" + name + ", size="
+                + size + "]";
+    }
+
     public Nematode(TableRow r)
     {
         this(
@@ -58,5 +66,13 @@ public class Nematode {
     }
     public void setEyes(boolean eyes) {
         this.eyes = eyes;
+    }
+
+    public void render(NematodeVisualiser pa)
+    {
+        pa.fill(255);
+        pa.textSize(40);
+        pa.text(name, 100, 100);
+
     }
 }
