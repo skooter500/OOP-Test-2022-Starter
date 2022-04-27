@@ -27,11 +27,14 @@ public class NematodeVisualiser extends PApplet
 			nematodes.add(a);
 		}
 	}
-
+	
 	public void keyPressed()
-	{		
-		if (keyCode == LEFT)
+	{
+		for(Nematode a:nematodes)
 		{
+			if (keyCode == LEFT)
+				{
+				}
 		}		
 	}
 
@@ -53,7 +56,10 @@ public class NematodeVisualiser extends PApplet
 	{
 		for(Nematode a:nematodes)
 		{
-			a.render(this);
+			for(int i = 0; i < 1; i++)
+			{
+				a.render(this);
+			}
 		}
 	}
 

@@ -1,6 +1,7 @@
 package ie.tudublin;
 
 import processing.data.TableRow;
+import processing.core.PApplet;
 
 public class Nematode {
     private String name;
@@ -70,8 +71,17 @@ public class Nematode {
 
     public void render(NematodeVisualiser pa)
     {
-        pa.fill(255);
-        pa.textSize(40);
+        float Size = 50;
+
+        for(int i = 0; i > Size;i++)
+        {
+            pa.stroke(255);
+            pa.noFill();
+            pa.circle(Size, pa.height/2, pa.width/2);
+        }
+        
+        // pa.fill(255);
+        // pa.textSize(40);
         pa.text(name, 100, 100);
 
     }
